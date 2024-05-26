@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshelf</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<aside class="bookshelf-img-wrapper">
+  <img src="img/background.jpg" class="bookshelf-img" alt="Bookshelf Background" />
+</aside>
+
+<main class="bookshelf-main">
+  <section class="bookshelf-form-wrapper">
+    <form class="form" action="#" id="form">
+      <div class="bookshelf-form-title">
+        <h2>BookShelf</h2>
+        <p>Tambahkan buku baru</p>
+      </div>
+
+      <div class="bookshelf-mb-3">
+        <label for="judul" class="bookshelf-form-label">Judul</label>
+        <input type="text" name="judul" id="judul" class="bookshelf-form-input" required/>
+      </div>
+
+      <div class="bookshelf-mb-3">
+        <label for="penulis" class="bookshelf-form-label">Penulis</label>
+        <input type="text" name="penulis" id="penulis" class="bookshelf-form-input" required/>
+      </div>
+
+      <div class="bookshelf-mb-3">
+        <label for="tahun" class="bookshelf-form-label">Tahun</label>
+        <input type="number" name="tahun" id="tahun" class="bookshelf-form-input" required />
+      </div>
+
+      <div class="bookshelf-checkbox-wrapper">
+        <label for="supportCheckbox" class="bookshelf-checkbox-label">
+          <div class="bookshelf-relative">
+            <input type="checkbox" id="supportCheckbox" class="bookshelf-input-checkbox" />
+            <div class="bookshelf-checkbox-inner">
+              <span class="bookshelf-opacity-0">
+                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" class="bookshelf-stroke-current">
+                  <path d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z" stroke-width="0.4"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          Selesai dibaca
+        </label>
+      </div>
+
+      <input id="bookSubmit" type="submit" name="Submit" class="bookshelf-btn" value="Tambahkan"/>
+    </form>
+
+    <div class="bookshelf-search-wrapper">
+      <input type="text" id="search" class="bookshelf-search-input" placeholder="Cari buku..." />
+      <button id="searchButton" type="button" class="bookshelf-btn">Search</button>
+    </div>
+
+    <section class="bookshelf-lists-wrapper">
+      <div id="incompleteBookshelfWrapper" class="bookshelf-card-list">
+        <h1>Buku belum dibaca</h1>
+        <div id="incompleteBookshelfList">
+            
+        </div>
+      </div>
+
+      <div id="completeBookshelfWrapper" class="bookshelf-card-list">
+        <h1>Buku sudah dibaca</h1>
+        <div id="completeBookshelfList" >
+         
+        </div>
+      </div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

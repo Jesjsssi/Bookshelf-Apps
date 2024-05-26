@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.bookshelf-main {
+  display: flex;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.bookshelf-form-wrapper {
+  flex: 1;
+  width: 50%;
+  max-width: 50%;
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.bookshelf-img-wrapper {
+  width: 50%;
+}
+
+.bookshelf-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.bookshelf-form-title {
+  margin-bottom: 30px;
+}
+
+.bookshelf-form-title h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #07074d;
+}
+
+.bookshelf-form-title p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #536387;
+  margin-top: 12px;
+}
+
+.bookshelf-mb-3 {
+  margin-bottom: 15px;
+}
+
+.bookshelf-form-label {
+  color: #536387;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bookshelf-form-input {
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 5px;
+  border: 1px solid #dde3ec;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+}
+
+.bookshelf-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookshelf-checkbox-wrapper {
+  margin-bottom: 15px;
+}
+
+.bookshelf-checkbox-label {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #536387;
+}
+
+.bookshelf-relative {
+  position: relative;
+}
+
+.bookshelf-input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.bookshelf-checkbox-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  margin-top: 2px;
+  border: 0.7px solid #dde3ec;
+  border-radius: 3px;
+}
+
+.bookshelf-opacity-0 {
+  opacity: 0;
+}
+
+.bookshelf-stroke-current {
+  stroke: currentColor;
+}
+
+#supportCheckbox:checked ~ .bookshelf-checkbox-inner .bookshelf-opacity-0 {
+  opacity: 1;
+}
+
+.bookshelf-btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 14px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  float: right;
+  margin-left: 10px;
+}
+
+.bookshelf-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookshelf-search-wrapper {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookshelf-search-input {
+  flex: 1;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #dde3ec;
+  background: #ffffff;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+}
+
+.bookshelf-search-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookshelf-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.bookshelf-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #dde3ec;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.bookshelf-card-content {
+  flex: 1;
+}
+
+.bookshelf-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #07074d;
+}
+
+.bookshelf-card-author,
+.bookshelf-card-year {
+  font-size: 14px;
+  color: #536387;
+  margin-top: 5px;
+}
+
+.bookshelf-card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.bookshelf-card-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #6a64f1;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.bookshelf-card-button:hover {
+  background: #5a54e0;
+}
+
+.bookshelf-type {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .bookshelf-main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .bookshelf-img {
+    height: 100%;
+    flex: 0 0 auto;
+    height: 50vh;
+  }
+
+  .bookshelf-form-wrapper {
+    flex: 1;
+    padding: 20px;
+    order: 2;
+  }
+
+  .bookshelf-lists-wrapper {
+    flex-direction: column;
+  }
+}
